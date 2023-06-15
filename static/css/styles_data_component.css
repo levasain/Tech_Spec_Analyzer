@@ -1,0 +1,59 @@
+h2 {
+    padding-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+#search-input {
+  float: right;
+  margin-right: 50px;
+  border: 3px solid #31a5ed;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#posts-container {
+    padding-top: 20px;
+}
+
+.post {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center; /* Вирівнювання по центру */
+    width: 50%;
+  }
+  
+  .post p {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+    text-align: left; /* Вирівнювання тексту ліворуч */
+  }
+  
+  .post + .post {
+    border-top: 3px dashed #31a5ed;
+  }
+  
+  .see-all {
+    cursor: pointer;
+    color: #31a5ed;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    margin-left: 10%;
+    font-weight: bold;
+  }
+
+  #not-found {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+.not-found-visible {
+  display: block !important;
+}

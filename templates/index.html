@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_top_menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_main_page.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_login_page.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_feedback.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_main_content.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script_login.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script_preview.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script_feedback.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" href="{{ url_for('static', filename='icons/logo.svg') }}" type="image/svg+xml">
+    <title>Tech Spec Analyzer</title>
+</head>
+<body>
+    <div id="loginContainer" class="login-container">
+        <span class="close-button" onclick="closeLogin()">X</span>
+        <h4 class="header_login">Login</h4>
+        <form id="loginForm" method="POST" action="/login">
+            <div>
+                <input type="text" id="email" name="email" placeholder="Email/Number">
+            </div>
+            <br>
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+            <br>
+            <div class="checkbox-container">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="rememberMeCheckbox" name="rememberMe">
+                    <span class="checkmark"></span>
+                    Remember me
+                </label>
+            </div>
+            <button class="button_login" type="submit" onclick="sendLogin()">Sign In</button>
+        </form>        
+        <p class="forgot-password">Forgot Password?</p>
+        <a class="sign-up" href="/register_page">Sign Up</a>
+    </div>
+
+    <div class="top-bar top-bar-visible">
+        <a href="/index"><img class="logo" src="{{ url_for('static', filename='icons/logo.svg') }}" alt="SVG Image"></a>
+        <div class="menu">
+            <ul class="menu_sheet">
+                <li class="menu_li"><a href="/news" class="menu_a">News</a></li>
+                <li class="menu_li"><a href="/about_us" class="menu_a">About Us</a></li>
+                <li class="menu_li"><a href="/contacts" class="menu_a">Contacts</a></li>
+                <li class="menu_li"><a href="javascript:showLogin()" class="menu_a">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    <div class="content">
+        <h1 class="header">Tech Spec<br>Analyzer</h1>
+        <div class="container">
+            <div class="preview">
+                <a href="javascript:scrollToSection()" class="btn_preview"><strong>Preview</strong></a>
+            </div>
+            <div class="get_started">
+                <a href="/get_started" class="btn_get_started"><strong>Get Started</strong></a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div id="previewTarget" class="preview_target"> 
+            <h2>What is Tech Spec Analyzer</h2>
+        </div>
+		<h2>Analyzing Computer Systems and Components</h2>
+	</header>
+	<main>
+		<section>
+			<p>Tech Spec Analyzer is a comprehensive online tool designed to analyze and evaluate computer systems and their components. Whether you are a tech enthusiast, a gamer, or a professional in the field of IT, Tech Spec Analyzer provides you with detailed information and insights to make informed decisions about your computer hardware.</p>
+		</section>
+		<section>
+			<h3>Features of Tech Spec Analyzer</h3>
+			<p>Tech Spec Analyzer offers a wide range of features to help you analyze and compare different system units and their components:</p>
+			<ul>
+				<li><strong>System Analysis:</strong> You can input the specifications of a computer system, including the processor, memory, storage, graphics card, and more. Tech Spec Analyzer will then evaluate the overall performance and compatibility of the system.</li>
+				<li><strong>Component Comparison:</strong> You can compare multiple components, such as CPUs, GPUs, RAM modules, and storage drives, to determine which one suits your requirements the best.</li>
+				<li><strong>Benchmarking:</strong> Tech Spec Analyzer provides benchmark scores for various hardware components, allowing you to assess their performance capabilities and identify potential bottlenecks.</li>
+				<li><strong>Compatibility Check:</strong> The tool helps you verify the compatibility of different components within a system, ensuring smooth integration and optimal performance.</li>
+				<li><strong>Price Comparison:</strong> You can explore and compare prices from various retailers to find the best deals on computer hardware.</li>
+				<li><strong>User Reviews:</strong> Tech Spec Analyzer incorporates user reviews and ratings for different components, providing valuable insights from the community.</li>
+			</ul>
+		</section>
+		<section>
+			<h3>How to Use Tech Spec Analyzer?</h3>
+			<p>Using Tech Spec Analyzer is simple and intuitive:</p>
+			<ol>
+				<li>Visit the Tech Spec Analyzer website.</li>
+				<li>Select the desired analysis or comparison tool.</li>
+				<li>Enter the specifications or search for the components you want to analyze or compare.</li>
+				<li>Review the results and insights provided by Tech Spec Analyzer.</li>
+				<li>Make informed decisions based on the analysis, benchmarks, compatibility, and user reviews.</li>
+			</ol>
+		</section>
+	</main>
+    
+    <div class="feedback-container">
+        
+        <div class="form-container">
+            <h2 class="provide_feedback">Provide feedback</h2>
+            <input type="email" id="email" placeholder="example@mail.com">
+            <textarea id="comment" placeholder="comment..."></textarea>
+          
+            <button onclick="sendEmail()">Send</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="social-icons">
+          <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="links">
+          <a href="/contacts">Contacts</a>
+          <br>
+          <a href="/about_us">About Us</a>
+        </div>
+        <div>
+          <div class="email">techspecanalyser@gmail.com</div>
+          <div class="name">Vasyl Yunko CS-201</div>
+        </div>
+    </div>
+</body>
+</html>

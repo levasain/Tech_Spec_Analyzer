@@ -1,0 +1,118 @@
+body {
+    background-color: #000;
+}
+
+.register-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  border: 1px solid #ccc;
+  padding: 60px 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.register-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header_register {
+  margin: 10px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: #000;
+  border: 3px solid #31a5ed;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #555;
+}
+
+.button_register {
+  background-color: #31a5ed;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button_register:hover {
+  background-color: #1c87c9;
+}
+
+.checkbox-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #252424;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkbox-label:hover .checkmark {
+  background-color: #f7f7f7;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #31a5ed;
+  border-color: #31a5ed;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-label .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_top_menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_data_component.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_footer.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" href="{{ url_for('static', filename='icons/logo.svg') }}" type="image/svg+xml">
+    <title>Tech Spec Analyzer</title>
+</head>
+<body>
+    <div class="top-bar top-bar-visible">
+        <a href="/index"><img class="logo" src="{{ url_for('static', filename='icons/logo.svg') }}" alt="SVG Image"></a>
+        <div class="menu">
+            <ul class="menu_sheet">
+                <li class="menu_li"><a href="/news" class="menu_a">News</a></li>
+                <li class="menu_li"><a href="/about_us" class="menu_a">About Us</a></li>
+                <li class="menu_li"><a href="/contacts" class="menu_a">Contacts</a></li>
+                <li class="menu_li"><a href="javascript:showLogin()" class="menu_a">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    
+    <h2>Available components for the system block</h2>
+    <input id="search-input" type="text" placeholder="Search...">
+    <div id="posts-container"></div>
+    <div id="not-found" style="display: none;">Not Found</div>
+    <div id="see-all-container"></div>
+    <script src="{{ url_for('static', filename='js/script_get_intel_data.js') }}"></script>
+
+    <div class="footer">
+        <div class="social-icons">
+          <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="links">
+          <a href="/contacts">Contacts</a>
+          <br>
+          <a href="/about_us">About Us</a>
+        </div>
+        <div>
+          <div class="email">techspecanalyser@gmail.com</div>
+          <div class="name">Vasyl Yunko CS-201</div>
+        </div>
+    </div>
+</body>
+</html>

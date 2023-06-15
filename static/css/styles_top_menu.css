@@ -1,0 +1,70 @@
+html, body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+.top-bar-hidden {
+  transform: translateY(-100%);
+}
+
+.top-bar-visible {
+  transform: translateY(0);
+}
+  
+.logo {
+  font-size: 16px;
+  margin-left: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+}
+.menu .menu_sheet {
+  list-style: none;
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+}
+
+.menu .menu_sheet .menu_li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.menu .menu_sheet .menu_li:last-child {
+  margin-right: 0;
+}
+
+.menu .menu_sheet .menu_li .menu_a {
+  color: rgba(255, 255, 255, 0.541);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+}
+
+.menu .menu_sheet .menu_li .menu_a:hover {
+  background-color: transparent; /* Встановлюємо фон як прозорий */
+  opacity: 1; /* Зроблюємо текст непрозорим */
+  color: rgba(255, 255, 255, 1); /* Змінюємо прозорість тексту на непрозорий */
+}

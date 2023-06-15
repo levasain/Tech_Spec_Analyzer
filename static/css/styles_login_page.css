@@ -1,0 +1,145 @@
+.login-container {
+    display: none;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    border: 1px solid #ccc;
+    padding: 60px 40px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .login-container.show {
+    top: 50%;
+    opacity: 1;
+  }
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_login {
+    margin: 10px;
+}
+
+.forgot-password {
+    color: rgba(255, 255, 255, 0.541);
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    color: #ffffff;
+}
+
+.sign-up {
+    color: rgba(255, 255, 255, 0.541);
+    transition: color 0.3s ease;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sign-up:hover {
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #000;
+    border: 3px solid #31a5ed;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #555;
+}
+
+.button_login {
+    background-color: #31a5ed;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button_login:hover {
+    background-color: #1c87c9;
+  }
+
+  .checkbox-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    user-select: none;
+  }
+  
+  .checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #252424;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .checkbox-label:hover .checkmark {
+    background-color: #f7f7f7;
+  }
+  
+  .checkbox-label input:checked ~ .checkmark {
+    background-color: #31a5ed;
+    border-color: #31a5ed;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-label .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 4px;
+    height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  

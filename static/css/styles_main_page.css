@@ -1,0 +1,82 @@
+iframe {
+    margin: 0;
+    height: 49px;
+    margin-bottom: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* Розташування елементів по краях */
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/pc_background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: auto;
+    padding: 0;
+    height: 600px;
+    margin-top: 0;
+}
+  
+.content {
+  margin-top: 0;
+}
+
+.header {
+    text-align: left;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 50px;
+    font-size: 120px;
+}
+  
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+header {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.preview {
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 30px;
+    font-size: 18px;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.btn_preview {
+    background-color: #000000ac;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+.get_started {
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 70px;
+    font-size: 18px;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+  
+.btn_get_started {
+    background-color: #31a5ed;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+}
